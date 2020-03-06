@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"./data"
+	"chitchat/data"
 )
 
 func authenticate(writer http.ResponseWriter, request *http.Request) {

@@ -1,10 +1,9 @@
 package main
 
 import (
+	"chitchat/data"
 	"errors"
 	"net/http"
-
-	"./data"
 )
 
 func session(writer http.ResponseWriter, request *http.Request) (session data.Session, err error) {

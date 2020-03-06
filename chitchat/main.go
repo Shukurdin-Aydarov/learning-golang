@@ -1,12 +1,11 @@
 package main
 
 import (
+	"chitchat/data"
 	"fmt"
 	"net/http"
 	"text/template"
 	"time"
-
-	"./data"
 )
 
 func main() {
@@ -16,7 +15,6 @@ func main() {
 
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/err", err)
-
 	mux.HandleFunc("/login", login)
 	mux.HandleFunc("/logout", logout)
 	mux.HandleFunc("/signup", signup)
