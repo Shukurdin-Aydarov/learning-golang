@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"net/http"
-	"os"
 	"path"
 	"strconv"
 )
@@ -16,7 +15,7 @@ type Post struct {
 
 func main() {
 	server := http.Server{
-		Addr: ":" + os.Getenv("PORT"),
+		Addr: ":8080",
 	}
 	http.HandleFunc("/post/", handleRequest)
 	server.ListenAndServe()
